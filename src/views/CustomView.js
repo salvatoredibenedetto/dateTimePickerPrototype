@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DateFnsUtils from "@date-io/date-fns"; // choose your lib
+import DateFnsUtils from "@date-io/date-fns";
 import {
   DatePicker,
   TimePicker,
@@ -7,6 +7,7 @@ import {
   MuiPickersUtilsProvider
 } from "@material-ui/pickers";
 import { Typography } from "@material-ui/core";
+import Toolbar from "../components/Toolbar";
 
 function CustomView() {
   const [selectedDate, handleDateChange] = useState(new Date());
@@ -18,9 +19,13 @@ function CustomView() {
       </Typography>
       <div className={"visible-wrapper"}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <DatePicker value={selectedDate} onChange={handleDateChange} />
-          <TimePicker value={selectedDate} onChange={handleDateChange} />
-          <DateTimePicker value={selectedDate} onChange={handleDateChange} />
+          <DateTimePicker
+            autoOk
+            value={selectedDate}
+            onChange={handleDateChange}
+            variant={"inline"}
+            ToolbarComponent={<Toolbar disablePast={true} />}
+          />
         </MuiPickersUtilsProvider>
       </div>
     </>
@@ -28,3 +33,5 @@ function CustomView() {
 }
 
 export default CustomView;
+
+//"date" | "year" | "month" | "hours" | "minutes"

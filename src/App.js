@@ -3,7 +3,7 @@ import * as Views from "./views";
 import Button from "@material-ui/core/Button";
 
 const App = () => {
-  const [visibleView, setVisibleView] = useState("InitialView");
+  const [visibleView, setVisibleView] = useState("CustomView");
   const VisibleView = Views[visibleView];
 
   const handleOnClick = (evt) => {
