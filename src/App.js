@@ -11,12 +11,13 @@ const App = () => {
   };
   return (
     <div className={"appContainer"}>
-      <nav>
+      <nav className={"nav-buttons"}>
         <Button
           onClick={handleOnClick}
           variant="contained"
           color="primary"
           value={"InitialView"}
+          className={"view-selector"}
         >
           Initial view
         </Button>
@@ -25,6 +26,7 @@ const App = () => {
           variant="contained"
           color="primary"
           value={"CustomView"}
+          className={"view-selector"}
         >
           Custom view
         </Button>

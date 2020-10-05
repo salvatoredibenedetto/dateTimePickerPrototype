@@ -13,7 +13,9 @@ function CustomView() {
 
   return (
     <>
-      <Typography variant="h3">Custom View</Typography>
+      <Typography variant="h3" className={"heading"}>
+        Custom View
+      </Typography>
       <div className={"visible-wrapper"}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker value={selectedDate} onChange={handleDateChange} />

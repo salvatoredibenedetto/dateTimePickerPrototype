@@ -5,15 +5,15 @@
   display: flex;
   justify-content: space-around;
 }
-button {
+.view-selector {
   margin-right: 20px !important;
 }
-nav {
+.nav-buttons {
   margin-bottom: 80px;
   display: flex;
   justify-content: space-around;
 }
-h3 {
+.heading {
   margin-bottom: 50px !important;
   text-align: center;
 }
