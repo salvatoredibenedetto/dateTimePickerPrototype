@@ -1,14 +1,19 @@
-#root {
+.appContainer {
+  width: 100%;
+}
+.visible-wrapper {
   display: flex;
   justify-content: space-around;
 }
-
 button {
   margin-right: 20px !important;
 }
 nav {
   margin-bottom: 80px;
+  display: flex;
+  justify-content: space-around;
 }
 h3 {
   margin-bottom: 50px !important;
+  text-align: center;
 }

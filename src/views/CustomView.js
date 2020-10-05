@@ -12,14 +12,16 @@ function CustomView() {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   return (
-    <div>
+    <>
       <Typography variant="h3">Custom View</Typography>
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <DatePicker value={selectedDate} onChange={handleDateChange} />
-        <TimePicker value={selectedDate} onChange={handleDateChange} />
-        <DateTimePicker value={selectedDate} onChange={handleDateChange} />
-      </MuiPickersUtilsProvider>
-    </div>
+      <div className={"visible-wrapper"}>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <DatePicker value={selectedDate} onChange={handleDateChange} />
+          <TimePicker value={selectedDate} onChange={handleDateChange} />
+          <DateTimePicker value={selectedDate} onChange={handleDateChange} />
+        </MuiPickersUtilsProvider>
+      </div>
+    </>
   );
 }
 
